@@ -1,0 +1,13 @@
+$("#Output").pivotUI({
+.
+.
+onRefresh: function(config) {
+//$("#output").find('select').addClass('hidden');
+$("#output").find('.rowTotal').addClass('hidden');
+$("#output").find('.colTotal').addClass('hidden');
+$("#output").find('.pvtGrandTotal').addClass('hidden');
+$("#output").find('.pvtTotalLabel').addClass('hidden');
+},
+.
+.
+});

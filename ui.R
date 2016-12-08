@@ -13,15 +13,16 @@ library(shinydashboard)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(theme="bootstrap.css",
+  
   # Application title
-  headerPanel(title="Old Faithful Geyser Data"),
+  headerPanel("Lab data"),
   sidebarPanel(
     sidebarMenu(
       menuItem(tabName = "plot", icon=icon("bar-chart-o"),text = "Histogram",selected = TRUE)
       
     )
   ), 
-  mainPanel(fluidRow(
+  mainPanel(
     tabItems(
       tabItem(tabName = "plot", 
               #slider input for number of bins
@@ -33,5 +34,5 @@ shinyUI(fluidPage(theme="bootstrap.css",
       )
       
     )
-    ))))
+    )))
 

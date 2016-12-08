@@ -18,7 +18,7 @@ library(stringr)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output, session) {
   
-  tab2<-read.xlsx("/Users/Bhuti 1/Documents/Shiny-lab-data/Lab.xlsx",2)
+  tab2<-read.xlsx("/Users/Bhuti 1/Documents/Lab.xlsx",2)
   tab2<- tab2[-38,]
   tab2[,2:22]<- sapply(tab2[,2:22],as.character)
   tab2[,2:22]<- sapply(tab2[,2:22],as.numeric)
@@ -26,6 +26,7 @@ shinyServer(function(input, output, session) {
   out<- str_split_fixed(df$variable,"_",3)
   out<-out[,-3]
   df<- data.frame(df,out)
+  
  # output$distPlot <- renderPlot({
   #  x <- df[,3]
    # hist(x, col = "blue")
